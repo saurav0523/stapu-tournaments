@@ -27,7 +27,7 @@ export const TournamentCalendar: React.FC<TournamentCalendarProps> = ({
   currentMonth,
   onMonthChange,
 }) => {
-  // Create marked dates object for calendar highlighting
+
   const getMarkedDates = () => {
     const marked: any = {};
     
@@ -59,7 +59,7 @@ export const TournamentCalendar: React.FC<TournamentCalendarProps> = ({
       }
     });
 
-    // Mark selected date
+ 
     if (selectedDate) {
       marked[selectedDate] = {
         ...marked[selectedDate],
@@ -83,7 +83,6 @@ export const TournamentCalendar: React.FC<TournamentCalendarProps> = ({
 
   const renderHeader = (date: any) => {
     try {
-      // Use currentMonth instead of the date parameter to ensure consistency
       const month = currentMonth;
       if (!month || isNaN(month.getTime())) {
         return (
@@ -139,13 +138,13 @@ export const TournamentCalendar: React.FC<TournamentCalendarProps> = ({
     );
   };
 
-  // Validate currentMonth to ensure it's a valid date
+
   const getValidCurrentDate = () => {
     try {
       if (currentMonth && !isNaN(currentMonth.getTime())) {
         return currentMonth.toISOString().split('T')[0];
       }
-      // Fallback to current date if invalid
+
       return new Date().toISOString().split('T')[0];
     } catch (error) {
       console.warn('Invalid date, using current date:', error);

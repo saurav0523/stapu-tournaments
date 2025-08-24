@@ -11,8 +11,7 @@ export const formatDate = (dateString: string): string => {
 
 export const formatTime = (dateString: string): string => {
   try {
-    const date = parseISO(dateString);
-    // Convert UTC to IST (UTC+5:30)
+    const date = parseISO(dateString);      
     const istDate = addHours(date, 5.5);
     return format(istDate, 'hh:mm a');
   } catch (error) {

@@ -55,13 +55,9 @@ export const TournamentCard: React.FC<TournamentCardProps> = ({ tournament }) =>
   };
 
   const renderMatchCard = (match: Match, index: number) => {
-    // Extract day from match date - hardcode to 17 for now to match screenshot
-    // const matchDate = new Date(match.start_time);
-    // const day = matchDate.getDate();
     const day = 17;
     return (
       <View key={match.id} style={styles.matchCard}>
-        {/* Match Header with Team Names and Stage */}
         <View style={styles.matchHeader}>
           <View style={styles.matchTitleContainer}>
             <Image 
@@ -81,7 +77,6 @@ export const TournamentCard: React.FC<TournamentCardProps> = ({ tournament }) =>
           </View>
         </View>
         
-        {/* Team Logos and VS */}
         <View style={styles.teamLogosContainer}>
           <Image
             source={getTournamentImageBySport(tournament.sport_name)}
@@ -96,7 +91,6 @@ export const TournamentCard: React.FC<TournamentCardProps> = ({ tournament }) =>
           />
         </View>
         
-        {/* Match Info (Date, Time, Venue) */}
         <View style={styles.matchInfoContainer}>
           <View style={styles.infoItem}>
             <View style={styles.calendarIconContainer}>
@@ -123,7 +117,6 @@ export const TournamentCard: React.FC<TournamentCardProps> = ({ tournament }) =>
 
   return (
     <View style={styles.container}>
-      {/* Outer Card */}
       <View style={styles.outerCard}>
         <View style={styles.cardContent}>
           <View style={styles.leftSection}>
@@ -155,7 +148,6 @@ export const TournamentCard: React.FC<TournamentCardProps> = ({ tournament }) =>
         </View>
       </View>
 
-      {/* Inner Cards (Matches) */}
       {isExpanded && tournament.matches.length > 0 && (
         <View style={styles.innerCardsContainer}>
           {tournament.matches.map((match, index) => renderMatchCard(match, index))}
@@ -295,8 +287,7 @@ const styles = StyleSheet.create({
     marginHorizontal: -16,
     paddingHorizontal: 16,
   },
-  
-  // Match card styles
+      
   matchCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 12,

@@ -24,10 +24,9 @@ export const TournamentScreen: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<string>('');
   const [currentMonth, setCurrentMonth] = useState(() => {
     try {
-      // Create a safe date for August 2025
       const date = new Date();
       date.setFullYear(2025);
-      date.setMonth(7); // August (0-indexed)
+      date.setMonth(7);
       date.setDate(1);
       date.setHours(0, 0, 0, 0);
       return date;
@@ -40,7 +39,6 @@ export const TournamentScreen: React.FC = () => {
   const [refreshing, setRefreshing] = useState(false);
   const [filterModalVisible, setFilterModalVisible] = useState(false);
 
-  // Fetch data on component mount
   useEffect(() => {
     fetchData();
   }, []);
@@ -73,7 +71,6 @@ export const TournamentScreen: React.FC = () => {
     setRefreshing(false);
   };
 
-  // Filter tournaments based on selected sport and date
   const filteredTournaments = useMemo(() => {
     let filtered: TournamentType[] = [];
 
@@ -81,7 +78,6 @@ export const TournamentScreen: React.FC = () => {
     console.log('🔍 Selected sport:', selectedSport ? selectedSport.sport_name : 'ALL Sports');
     console.log('🔍 Total tournaments data:', tournamentsData.length, 'sports');
 
-    // Filter by sport
     if (selectedSport) {
       console.log('🔍 Looking for sport with ID:', selectedSport.sports_id);
       const sportData = tournamentsData.find(s => s.sports_id === selectedSport.sports_id);
@@ -95,7 +91,6 @@ export const TournamentScreen: React.FC = () => {
         console.log('⚠️ No sport data found for selected sport ID:', selectedSport.sports_id);
       }
     } else {
-      // All sports
       console.log('🔍 Showing all sports tournaments');
       filtered = tournamentsData.flatMap(s => 
         s.tournaments.map(tournament => ({
@@ -107,7 +102,6 @@ export const TournamentScreen: React.FC = () => {
 
     console.log('🔍 Tournaments after sport filter:', filtered.length);
 
-    // Filter by date if selected
     if (selectedDate) {
       console.log('🔍 Filtering by date:', selectedDate);
       console.log('📊 Tournaments before date filter:', filtered.length);
@@ -122,7 +116,6 @@ export const TournamentScreen: React.FC = () => {
     return filtered;
   }, [selectedSport, selectedDate, tournamentsData]);
 
-  // Get all tournament dates for calendar highlighting
   const allTournamentDates = useMemo(() => {
     const dates: TournamentType[] = [];
     console.log('📅 Getting calendar dates for sport:', selectedSport ? selectedSport.sport_name : 'ALL Sports');
@@ -153,7 +146,7 @@ export const TournamentScreen: React.FC = () => {
     console.log('🏈 Sport selected:', sport ? sport.sport_name : 'ALL Sports');
     console.log('🏈 Sport ID:', sport ? sport.sports_id : 'null');
     setSelectedSport(sport);
-    setSelectedDate(''); // Reset date selection when sport changes
+    setSelectedDate('');
   };
 
   const handleDateSelect = (date: string) => {

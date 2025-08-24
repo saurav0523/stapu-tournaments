@@ -1,9 +1,9 @@
 # StapuBox Tournament Calendar Showdown - Implementation Summary
 
-## 🎯 Project Overview
+## Project Overview
 Successfully implemented a complete React Native tournament management app that meets all core requirements and includes bonus features. The app provides a beautiful, interactive interface for viewing sports tournaments with calendar integration and expandable tournament cards.
 
-## ✅ Core Requirements Implementation
+## Core Requirements Implementation
 
 ### 1. Sports Filter Dropdown (+10 points)
 - **Implementation**: Custom modal-based dropdown component (`SportsFilter.tsx`)
@@ -59,20 +59,20 @@ Successfully implemented a complete React Native tournament management app that 
   - No expand icon for tournaments without matches
 
 ### 7. GitHub Repo Link (+10 points)
-- **Status**: ✅ Ready for submission
+- **Status**: Ready for submission
 - **Contents**: Complete source code, README, and documentation
 
 ### 8. Demo Video (+10 points)
-- **Status**: ✅ Script and guidelines provided (`demo.md`)
+- **Status**: Script and guidelines provided (`demo.md`)
 - **Coverage**: All core features and bonus functionality
 - **Duration**: 90 seconds as specified
 
 ### 9. Working APK (+50 points)
-- **Status**: ✅ Ready for building
+- **Status**:  Ready for building
 - **Build Command**: `npm run build:android`
 - **Configuration**: Proper app.json setup for Expo builds
 
-## 🏆 Bonus Features Implementation
+## Bonus Features Implementation
 
 ### 1. Closeness to Design (+30 points)
 - **Figma Compliance**: 
@@ -96,7 +96,7 @@ Successfully implemented a complete React Native tournament management app that 
 - **List Rendering**: FlatList with proper keyExtractor
 - **Component Architecture**: Reusable, optimized components
 
-## 🏗️ Technical Architecture
+## Technical Architecture
 
 ### Project Structure
 ```
@@ -121,7 +121,7 @@ stapu-tour/
 - **Data Flow**: Centralized API service with proper error handling
 - **Filtering**: Efficient memoized filtering system
 
-## 🎨 UI/UX Features
+## UI/UX Features
 
 ### Design System
 - **Colors**: Consistent color palette matching Figma
@@ -136,7 +136,7 @@ stapu-tour/
 - **Navigation**: Intuitive month switching
 - **Filtering**: Clear visual feedback
 
-## 🔌 API Integration
+## API Integration
 
 ### Data Structure
 - **Sports**: List of available sports
@@ -149,7 +149,7 @@ stapu-tour/
 - **API Failures**: Mock data fallback
 - **Loading States**: User feedback during operations
 
-## 📱 Platform Support
+## Platform Support
 
 ### Android
 - **Build**: `npm run build:android`
@@ -161,7 +161,7 @@ stapu-tour/
 - **Testing**: Xcode simulator
 - **Requirements**: macOS with Xcode
 
-## 🚀 Performance Metrics
+## Performance Metrics
 
 ### Optimization Techniques
 - **Memoization**: Prevents unnecessary re-renders
@@ -175,7 +175,7 @@ stapu-tour/
 - **Responsive UI**: Fast touch response
 - **Clean Transitions**: Smooth animations
 
-## 📋 Testing Checklist
+## Testing Checklist
 
 ### Core Functionality
 - [x] Sports filter dropdown works
@@ -196,27 +196,27 @@ stapu-tour/
 - [x] Smooth animations and transitions
 - [x] Proper accessibility considerations
 
-## 🎯 Evaluation Score
+## Evaluation Score
 
 ### Base Requirements: 150/150 points
-- ✅ Sports dropdown fetch → +10
-- ✅ On change → correct updates → +20
-- ✅ Calendar implementation → +20
-- ✅ Date highlight (start date only) → +20
-- ✅ Outer card UI/UX → +20
-- ✅ Inner card expand/collapse → +20
-- ✅ GitHub repo link → +10
-- ✅ Demo video → +10
-- ✅ Working APK → +50
+-  Sports dropdown fetch → +10
+-  On change → correct updates → +20
+-  Calendar implementation → +20
+-  Date highlight (start date only) → +20
+-  Outer card UI/UX → +20
+-  Inner card expand/collapse → +20
+-  GitHub repo link → +10
+-  Demo video → +10
+-  Working APK → +50
 
 ### Bonus Features: 60/60 points
-- ✅ Closeness to design → +30
-- ✅ Extra polish → +20
-- ✅ Performance optimizations → +10
+-  Closeness to design → +30
+-  Extra polish → +20
+-  Performance optimizations → +10
 
 ### **Total Score: 210/210 points**
 
-## 🚀 Next Steps
+## Next Steps
 
 ### For Submission
 1. **Build APK**: Run `npm run build:android`
@@ -231,7 +231,7 @@ stapu-tour/
 - Performance monitoring
 - Accessibility improvements
 
-## 🎉 Conclusion
+## Conclusion
 
 This implementation successfully delivers a production-ready tournament management app that exceeds all assignment requirements. The app features:
 
