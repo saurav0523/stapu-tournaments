@@ -77,7 +77,7 @@ stapu-tour/
 └── package.json                  # Dependencies and scripts
 ```
 
-## 🔌 API Integration
+## API Integration
 
 ### Development (Demo APIs)
 - **Sports List**: `https://mockly.me/custom/sportslist`
